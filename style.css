@@ -1,0 +1,140 @@
+:root {
+   --sub-color: #0000009a;
+   --text-color: black;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: none;
+   outline: none;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+
+   background: #acd1ce;
+   color: var(--text-color);
+   transition: all 0.2s linear;
+}
+
+.night {
+   background: #343c51;
+   color: white;
+   --sub-color: #ffffffc2;
+   --text-color: white;
+}
+
+h2 {
+   font-weight: normal;
+   font-size: 52px;
+}
+
+.container {
+   width: 500px;
+   max-width: 500px;
+
+   padding: 50px;
+
+   text-align: center;
+   transition: all 0.2s linear;
+}
+
+.search-form {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   margin-bottom: 60px;
+}
+
+.search-input {
+   background: transparent;
+   text-transform: uppercase;
+   caret-color: var(--sub-color);
+   font-weight: 500;
+}
+
+.search-input::placeholder {
+   font-weight: normal;
+   text-transform: capitalize;
+   color: var(--sub-color);
+}
+
+.search-btn {
+   padding: 10px;
+   border-radius: 50%;
+   background: transparent;
+   color: var(--text-color);
+}
+
+.location-i,
+.search-i,
+.wind-i,
+.humidity-i {
+   font-size: 28px;
+}
+
+.location {
+   font-size: 37px;
+   font-weight: 500;
+   text-transform: capitalize;
+}
+
+.weather-info {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100%;
+}
+
+.weather-state-img {
+   width: 200px;
+   margin-bottom: -20px;
+}
+
+.weather-state {
+   font-size: 28px;
+   margin-bottom: 50px;
+   text-transform: capitalize;
+}
+
+.temp {
+   font-size: 47px;
+   font-weight: 500;
+   margin-bottom: 8px;
+}
+
+.temp-feels-like {
+   color: var(--sub-color);
+   margin-bottom: 30px;
+}
+
+.not-found {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.not-found h2 {
+   margin-bottom: 20px;
+   font-size: 72px;
+   font-weight: bold;
+}
+
+.none {
+   display: none;
+}
+
+.bottom-block {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 100%;
+}
