@@ -141,3 +141,27 @@ h2 {
    justify-content: space-evenly;
    width: 100%;
 }
+
+.loading-box {
+   margin: 0 auto;
+
+   width: 80px;
+   height: 80px;
+
+   border-radius: 50%;
+
+   border: 6px solid;
+   border-color: var(--text-color) transparent var(--text-color) transparent;
+
+   animation: loading-circle 0.8s ease infinite;
+}
+
+@keyframes loading-circle {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
