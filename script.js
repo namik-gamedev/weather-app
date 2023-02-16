@@ -1,5 +1,7 @@
 const container = document.querySelector('.container')
 
+const loader = container.querySelector('.loader-box')
+
 const searchForm = document.querySelector('.search-form')
 const searchInput = document.querySelector('.search-input')
 
@@ -20,6 +22,7 @@ searchForm.addEventListener('submit', (e) => {
    const location = searchInput.value
    if (location === '') { return }
 
+   loader.classList.remove('none')
    setWeather(location)
 })
 
@@ -30,7 +33,7 @@ async function setWeather(location) {
    const response = await fetch(url)
    const data = await response.json()
 
-   console.log(data)
+   // console.log(data)
 
    if (data.cod === 200) {
       notFound.classList.add('none')
@@ -54,4 +57,6 @@ async function setWeather(location) {
       notFound.classList.remove('none')
       weatherInfo.classList.add('none')
    }
+
+   loader.classList.add('none')
 }

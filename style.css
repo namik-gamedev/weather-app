@@ -37,8 +37,8 @@ h2 {
 }
 
 .container {
-   width: 500px;
-   max-width: 500px;
+   width: 600px;
+   max-width: 600px;
 
    padding: 50px;
 
@@ -73,6 +73,8 @@ h2 {
    border-radius: 50%;
    background: transparent;
    color: var(--text-color);
+
+   cursor: pointer;
 }
 
 .location-i,
