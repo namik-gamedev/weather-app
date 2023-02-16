@@ -53,8 +53,10 @@ async function setWeather(location) {
       weatherState.innerText = data.weather[0].description
       temp.innerText = `${data.main.temp.toFixed(1)} °C`
       tempFeelsLike.innerText = `Ощущается как ${data.main.feels_like.toFixed(1)} °C`
-      wind.innerHTML = `<i class="fa-solid fa-wind wind-i"></i> <br> ${data.wind.speed.toFixed(1)} м/сек`
-      humidity.innerHTML = `<i class="fa-solid fa-water humidity-i"></i> <br> ${data.main.humidity.toFixed(1)} %`
+      wind.innerHTML = `${data.wind.speed.toFixed(1)} м/сек`
+      humidity.innerHTML = `${data.main.humidity.toFixed(1)} %`
+
+      searchInput.value = ''
    } else {
       notFound.classList.remove('none')
       weatherInfo.classList.add('none')
