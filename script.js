@@ -18,7 +18,7 @@ searchForm.addEventListener('submit', (e) => {
    e.preventDefault()
 
    const location = searchInput.value
-   if (location === '') return
+   if (location === '') { return }
 
    setWeather(location)
 })
@@ -32,7 +32,7 @@ async function setWeather(location) {
 
    console.log(data)
 
-   if (!(data.cod === '404')) {
+   if (data.cod === 200) {
       notFound.classList.add('none')
       weatherInfo.classList.remove('none')
 
@@ -50,10 +50,8 @@ async function setWeather(location) {
       tempFeelsLike.innerText = `Ощущается как ${data.main.feels_like.toFixed(1)} °C`
       wind.innerHTML = `<i class="fa-solid fa-wind wind-i"></i> <br> ${data.wind.speed.toFixed(1)} м/сек`
       humidity.innerHTML = `<i class="fa-solid fa-water humidity-i"></i> <br> ${data.main.humidity.toFixed(1)} %`
-
-      return
+   } else {
+      notFound.classList.remove('none')
+      weatherInfo.classList.add('none')
    }
-
-   notFound.classList.remove('none')
-   weatherInfo.classList.add('none')
 }
